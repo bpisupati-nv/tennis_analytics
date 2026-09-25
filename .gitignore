@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+# Calibration check images written by calibrate_court.py next to its input
+*_overlay.jpg
+*_calibration.json
+
+# Regenerable outputs of calib_report/tools
+calib_overlays/
+calib_report/dataset/
+calib_report/stages/*/overlays/
+calib_report/stages/*/sheet.jpg
+calib_report/figures/pipeline/*/*
+!calib_report/figures/pipeline/*/strip.jpg

@@ -1,0 +1,11 @@
+{
+ "00_baseline": {"kept": true, "title": "Baseline", "change": "Calibration as it stood before this work."},
+ "01_ambiguous_angle_band": {"kept": true, "title": "Ambiguous-angle band", "change": "Lines 24-40 degrees from horizontal are offered as both baseline and sideline candidates instead of being split at a fixed 32 degrees."},
+ "02_x_refine_top8": {"kept": false, "title": "Refine top 8 candidates (rejected)", "change": "Refine the 8 best candidate courts instead of only the best one, and keep the best refined score."},
+ "03_band_lines_fill_leftover_slots": {"kept": true, "title": "Band lines fill leftover slots", "change": "Lines from the ambiguous band only fill line slots that unambiguous lines leave free."},
+ "04_refine_outline_guard": {"kept": true, "title": "Refinement outline guard", "change": "Each refinement step must still produce a plausible court outline."},
+ "05_score_partially_visible_courts": {"kept": true, "title": "Score partially visible courts", "change": "A court with up to 40% of its markings outside the frame is scored on its visible markings, with a proportional penalty; corners may lie further outside the frame."},
+ "06_vanishing_point_line_families": {"kept": true, "title": "Vanishing-point line families", "change": "Lines are also grouped by the vanishing point they run towards, not only by their angle in the image."},
+ "07_x_refine_with_far_half": {"kept": false, "title": "Refine against far half too (rejected)", "change": "Half-court fits are refined against far-half markings that are in view as well."},
+ "08_stricter_bar_for_partial_views": {"kept": true, "title": "Stricter bar for partial views", "change": "A partially visible court must reach a raw score of 0.6 before it is considered."}
+}

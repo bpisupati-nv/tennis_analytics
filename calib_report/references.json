@@ -1,0 +1,182 @@
+{
+ "court.png": {
+  "world_to_pixel": [
+   [
+    46.20363907947919,
+    -23.063801910589707,
+    580.734827523695
+   ],
+   [
+    0.8441420409599814,
+    -6.188853517069466,
+    408.93163373692795
+   ],
+   [
+    0.0010373944698879576,
+    -0.027775751410022923,
+    0.9999999999999999
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ },
+ "court_wimbledon_no1_grass.jpg": {
+  "world_to_pixel": [
+   [
+    50.84327072660371,
+    -18.800860447329736,
+    522.0404668723443
+   ],
+   [
+    -0.3604709803465538,
+    0.2643311223632491,
+    523.2452147057877
+   ],
+   [
+    -0.0013431571713254226,
+    -0.018621102517596803,
+    1.0
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ },
+ "court_delhi_centre_hard.jpg": {
+  "world_to_pixel": [
+   [
+    64.71543016373313,
+    -52.76863901420385,
+    1304.1946777082978
+   ],
+   [
+    -1.9610974158822876,
+    3.575975637807213,
+    391.2074303115095
+   ],
+   [
+    -0.006233974382610684,
+    -0.02350632613850149,
+    1.0
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ },
+ "court_arthur_ashe_hard.jpg": {
+  "world_to_pixel": [
+   [
+    38.4213222358468,
+    -3.903412549045586,
+    169.62938442329184
+   ],
+   [
+    -0.16713394531135553,
+    12.777335640703042,
+    201.50165436831932
+   ],
+   [
+    7.16691510201536e-05,
+    -0.011344938458199935,
+    0.9999999999999999
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ },
+ "court_naples_universiade_clay.jpg": {
+  "world_to_pixel": [
+   [
+    66.91921844092097,
+    -35.076524282986036,
+    916.4320798512819
+   ],
+   [
+    -0.6234014647436487,
+    7.438088865760571,
+    150.81822950101414
+   ],
+   [
+    -0.001786911432312765,
+    -0.02301723868215881,
+    1.0
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ },
+ "court_hanoi_times_city_hard.jpg": {
+  "world_to_pixel": [
+   [
+    37.816434286933934,
+    -47.96086060254738,
+    870.9817617355736
+   ],
+   [
+    -8.038046777855781,
+    -11.490601175290093,
+    485.2741337380796
+   ],
+   [
+    -0.01567494089333505,
+    -0.03001757415744859,
+    1.0
+   ]
+  ],
+  "lines": [
+   "L doubles",
+   "L singles",
+   "R doubles",
+   "R singles",
+   "centre",
+   "far baseline",
+   "far service",
+   "near baseline",
+   "near service"
+  ]
+ }
+}
