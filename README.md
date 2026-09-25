@@ -47,6 +47,27 @@ For video from a fixed camera, calibrate once and reuse the result for every fra
 - **It can refuse.** When it isn't confident, `auto_calibrate` returns `False` rather than a wrong answer. Always check the return value.
 - **Check the `debug_path` overlay for any new venue.** The code has been tested on only seven photos, so treat new venues as unproven until you've seen the fit.
 
+### Calibration error on the test photos
+
+These are the results for the current `court.py` on the photos in `dataset/`. Error is the distance on the ground between where the calibration places a court point and where the hand-approved ground truth places it. It is sampled on a 25 cm grid over each half of the court, and the ground truth itself is accurate to about 5 cm. All errors are in centimetres.
+
+| Photo | Layout fitted | Score | Near half, median (cm) | Near half, 95th percentile (cm) | Far half, median (cm) | Far half, 95th percentile (cm) | Near half, median before the improvements (cm) |
+|---|---|---|---|---|---|---|---|
+| Broadcast frame (`court.png`) | near | 0.90 | 9.0 | 16 | 13 | 35 | 9.0 |
+| Wimbledon No.1, grass | full | 0.95 | 3.6 | 5.0 | 4.1 | 5.4 | 3.6 |
+| Delhi centre, hard | full | 0.95 | 7.2 | 18 | 13 | 23 | 95 |
+| Arthur Ashe, hard | full | 1.00 | 5.7 | 9.2 | 3.7 | 6.3 | 5.7 |
+| Naples, clay | near | 0.95 | 5.3 | 18 | 31 | 58 | 5.3 |
+| Hanoi Times City, hard | near | 0.77 | 11 | 42 | 120 | 213 | 826 |
+| Val-d'Oingt, hard | refused | – | – | – | – | – | refused |
+
+- **Near half:** every calibrated photo is within 11 cm (median). The improvements took Delhi from 95 cm to 7 cm and Hanoi from 8.3 m to 11 cm, and left the other four unchanged.
+- **Far half:** `full` fits stay within 13 cm. `near` fits extrapolate the far half from the near half, so the error grows with how close and low the camera is, reaching 1.2 m for Hanoi.
+- **Partly out of frame:** Hanoi has one corner out of frame, so only 84% of its near half is visible. Its error is measured on the visible part.
+- **No ground truth:** Val-d'Oingt has none, and the calibrator refuses it rather than giving a wrong answer.
+
+`calib_report/tables.md` has the same measurements for every stage of development.
+
 ### Command line and agent skill
 
 `skills/tennis-court-calibration/` packages calibration as an agent skill. An AI agent reads `SKILL.md` and follows it: calibrate the image, check the overlay, report the homography, and fall back to manual corners if needed. Its script also works on its own:
