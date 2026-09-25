@@ -28,7 +28,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(__file__))
 import reference as R  # noqa: E402
-from common import (CL, CW, NET, PHOTO_DIR, PHOTOS, REPORT_DIR,  # noqa: E402
+from common import (CL, CW, NET, PHOTO_DIR, PHOTOS, PROJECT_DIR, REPORT_DIR,  # noqa: E402
                     ground_error, load_court)
 
 TOP_PROPOSALS = 30
@@ -146,7 +146,7 @@ def solve_photo(img, court):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--synthetic", action="store_true", help="run on dataset/synthetic")
-    ap.add_argument("--court", default=os.path.join(PHOTO_DIR, "court.py"),
+    ap.add_argument("--court", default=os.path.join(PROJECT_DIR, "court.py"),
                     help="court.py whose candidate courts seed the solver")
     ap.add_argument("--out")
     ap.add_argument("photos", nargs="*")

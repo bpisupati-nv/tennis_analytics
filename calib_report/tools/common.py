@@ -8,7 +8,8 @@ import cv2
 import numpy as np
 
 REPORT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PHOTO_DIR = os.path.dirname(REPORT_DIR)
+PROJECT_DIR = os.path.dirname(REPORT_DIR)
+PHOTO_DIR = os.path.join(PROJECT_DIR, "dataset")
 
 PHOTOS = [
     ("court.png", "Broadcast frame"),

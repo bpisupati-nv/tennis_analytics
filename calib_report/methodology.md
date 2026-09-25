@@ -46,7 +46,7 @@ All of this is `CourtMapper.auto_calibrate` in `court.py`.
 
 ## 4. The dataset
 
-**Location:** the photos are in `tennis_analytics/`. Everything derived from them is in `tennis_analytics/calib_report/`.
+**Location:** the photos are in `tennis_analytics/dataset/`. Everything derived from them is in `tennis_analytics/calib_report/`.
 
 | Photo | Size (px) | Type | Ground truth? |
 |---|---|---|---|

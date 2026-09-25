@@ -14,9 +14,9 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(__file__))
-from common import load_court, REPORT_DIR, PHOTO_DIR  # noqa: E402
+from common import load_court, REPORT_DIR, PHOTO_DIR, PROJECT_DIR  # noqa: E402
 
-court = load_court(os.path.join(PHOTO_DIR, "court.py"))
+court = load_court(os.path.join(PROJECT_DIR, "court.py"))
 CW, CL = court.COURT_WIDTH, court.COURT_LENGTH
 SI, SY = court.SINGLES_INSET, court.SERVICE_LINE_Y
 

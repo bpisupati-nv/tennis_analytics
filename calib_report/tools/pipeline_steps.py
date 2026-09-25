@@ -17,10 +17,10 @@ import cv2
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(__file__))
-from common import (PHOTO_DIR, REPORT_DIR, banner, ground_error,  # noqa: E402
+from common import (PHOTO_DIR, PROJECT_DIR, REPORT_DIR, banner, ground_error,  # noqa: E402
                     load_court, singles_overlay)
 
-court = load_court(os.path.join(PHOTO_DIR, "court.py"))
+court = load_court(os.path.join(PROJECT_DIR, "court.py"))
 REFS = json.load(open(os.path.join(REPORT_DIR, "references.json")))
 CANDIDATE_RANKS = (100, 20, 5, 2)
 DEMO_NUDGE = 2.5  # corner offset for the convergence demo, in scoring tolerances

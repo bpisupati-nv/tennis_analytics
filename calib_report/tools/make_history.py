@@ -7,7 +7,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from common import REPORT_DIR, PHOTO_DIR  # noqa: E402
+from common import REPORT_DIR, PROJECT_DIR  # noqa: E402
 
 
 def sub(text, old, new):
@@ -93,7 +93,7 @@ TOPK_REFINE = """        ranked.sort(key=lambda item: item[0], reverse=True)
 
 
 def main():
-    current = open(os.path.join(PHOTO_DIR, "court.py")).read()
+    current = open(os.path.join(PROJECT_DIR, "court.py")).read()
     no_guard = sub(current, GUARD, "")
     naive_band = sub(sub(no_guard, FALLBACK_DETECT, NAIVE_DETECT), FALLBACK_DEDUP, PLAIN_DEDUP)
     baseline = sub(naive_band, BAND_CLASSIFY, CUTOFF_CLASSIFY)
