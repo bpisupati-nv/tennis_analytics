@@ -36,7 +36,15 @@ Wraps `CourtMapper` from `tennis_analytics/court.py`. Automatic calibration find
 
 ## Using the result
 
-`pixel_to_court` maps pixels to metres; `court_to_pixel` is its inverse. Both are 3×3 matrices in the JSON:
+To convert more pixel positions later, reuse the saved calibration instead of calibrating again. This needs no image:
+
+```bash
+python scripts/pixel_to_court.py <name>_calibration.json X,Y [X,Y ...]
+```
+
+It prints each pixel with its `court_m` position. Exit code 2 means the file holds no homography because calibration was refused.
+
+In the JSON, `pixel_to_court` maps pixels to metres; `court_to_pixel` is its inverse. Both are 3×3 matrices in the JSON:
 
 ```python
 import json, cv2, numpy as np

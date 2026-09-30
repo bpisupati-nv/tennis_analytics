@@ -78,6 +78,12 @@ python tennis_analytics/skills/tennis-court-calibration/scripts/calibrate_court.
 
 This writes `my_court_calibration.json` (both homographies, layout, score, point conversions) and `my_court_overlay.jpg`. It exits with code 0 when calibrated and 2 when automatic calibration refuses. Pass `--corners` with the four doubles corners (far-left, far-right, near-right, near-left) to calibrate manually.
 
+To convert more pixels later without recalibrating, pass the saved calibration to `pixel_to_court.py`. It reads only the JSON, not the image:
+
+```bash
+python tennis_analytics/skills/tennis-court-calibration/scripts/pixel_to_court.py my_court_calibration.json 850,620 400,300
+```
+
 To install the skill, symlink it so that the script can still find `court.py` in this checkout:
 
 ```bash
