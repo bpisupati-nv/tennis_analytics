@@ -42,7 +42,9 @@ To convert more pixel positions later, reuse the saved calibration instead of ca
 python scripts/pixel_to_court.py <name>_calibration.json X,Y [X,Y ...]
 ```
 
-It prints each pixel with its `court_m` position. Exit code 2 means the file holds no homography because calibration was refused.
+Pixels must be in the full-resolution frame that was calibrated (`image_size` in the JSON), not a resized copy. It prints each pixel with its `court_m` position.
+
+Exit code 0 means converted. 2 means the file holds no homography because calibration was refused. 1 is an error, such as a missing or unreadable calibration file, or a point not written as `X,Y`.
 
 In the JSON, `pixel_to_court` maps pixels to metres; `court_to_pixel` is its inverse. Both are 3×3 matrices in the JSON:
 
